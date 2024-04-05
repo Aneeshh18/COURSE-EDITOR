@@ -1,15 +1,15 @@
-import './App.css'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import EditCoursePage from "./components/EditCoursePage";
 
 function App() {
-
   return (
-    <>
-      <div>
-        <h1>Hello</h1>
-      </div>
-
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/edit-course/:courseId" element={<EditCoursePage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
